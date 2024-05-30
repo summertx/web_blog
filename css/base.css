@@ -1,0 +1,313 @@
+
+/* +++++ general proporties +++++ */
+
+
+/* For general */
+
+html 
+{
+	background-color:darkgray;
+	background-image:url("../media/Background.jpeg");
+}
+
+h1, footer p, figcaption, figure, video, article
+{
+    text-align:center; 
+}
+
+header
+{
+	margin-bottom: 30px;
+	margin-top: 40px;
+}
+
+h1
+{
+	color:rgb(18, 88, 25);
+	margin: 30px 30px 30px 30px;
+	font-size:3em;
+}
+
+h2
+{
+	color:rgb(29, 129, 39);
+	font-size:2.2em;
+	margin: 7px;			
+}
+
+h3
+{
+	color:rgb(29, 129, 39);
+	font-size:1.3em;
+}
+
+body,header 
+{
+    border-radius:20px 20px 20px 20px; 
+}
+
+body 
+{ 
+	font-family: auto; 	
+	background-color:rgb(248, 246, 229);
+	width:80%;
+	max-width:1200px;
+	min-width:700px;
+	padding:0 20px 20px 20px; 
+	margin:20px auto;
+	border:0px dotted  rgb(92, 18, 18);
+	box-shadow:0 0 30px black;		
+} 
+
+article
+{
+	margin: 15px 15px 15px 15px;
+	border: 3px rgb(113, 186, 89) solid;
+	border-radius:10px 10px 10px 10px; 
+	padding: 15px;
+	background-color: rgb(243, 252, 239);
+}
+
+video, img
+{
+	width: 70%;
+    height: auto;
+    object-fit: contain;
+}
+
+ul
+{
+	text-align: left;
+}
+
+/* For links */
+
+li 
+{
+	font-size:1em;
+    margin-bottom: 5px;
+}
+
+p
+{
+    text-align: left;
+}
+
+/* For forms */
+
+form
+{
+	margin: 15px 15px 15px 15px;
+	border: 3px rgb(85, 139, 68) solid;
+	background-color: rgb(243, 252, 239);
+	border-radius:10px 10px 10px 10px; 
+	padding: 15px;
+}  
+
+figcaption  
+{
+	font-family:cursive;							 
+	font-family: 'Pacifico', cursive;					
+}
+
+/* For table */
+
+table 
+{
+	background-color: rgb(249, 254, 211);
+	margin-top: 10px;
+	margin:auto;
+	width:350px;
+}
+
+th,td 
+{
+	border: 10px;
+}
+
+th 
+{
+	text-align:left
+}
+
+caption
+{
+	color: rgb(143, 142, 76);
+	margin-top: 20px;
+}
+
+
+
+/* +++++ detail proporties +++++ */
+
+
+
+/* For videos */
+
+video#topvideo1, video#topvideo2
+{
+	display: block;
+  	margin: 0 auto;
+	width: 80%;
+	height: 600px; 
+}
+
+/* For the navagation bars */
+
+nav#SecondPageIndex
+{
+	border: 3px rgb(113, 186, 89) solid;
+	border-radius:10px 10px 10px 10px; 
+	margin: 15px 15px 15px 15px;
+	padding:0 30px 0 0;
+	font-size: 1.3em;
+	color:rgb(98, 194, 144); 
+	text-decoration:underline;
+}
+
+nav#SecondPageIndex a
+{
+	color:rgb(98, 194, 144); 
+}
+
+header nav#mainmenu
+{
+	margin-bottom: 10px;
+	color:rgb(98, 194, 144);
+}
+
+header nav#mainmenu a, header nav#mainmenu b 
+{
+	padding:0 30px 0 0;
+	font-size: 2em;
+}
+
+header nav#mainmenu a:visited 
+{
+	color:rgb(98, 194, 144); 
+	text-decoration:underline;
+}
+
+header nav#mainmenu b
+{
+	color:rgb(45, 137, 90); 
+}
+
+/* for skip */
+
+nav#skip a 
+{
+	position:absolute; 
+	left:-9999px;
+}
+
+nav#skip a:focus 
+{
+	position:static;
+}
+
+
+
+/* +++++ Breakpoint and print media +++++ */
+
+
+
+/* breakpoint1 for 0 - 767px */
+
+@media screen and (max-width: 767px) 
+{
+	article, header
+	{
+		float:none; 
+		width:90%;
+	}
+
+	body 
+	{
+		width:70%;
+	}
+		
+	article, h2 
+	{
+		margin:10px 0;
+	}
+
+	article
+	{
+		float: none;
+	}
+}
+
+/* breakpoint2 for 768 - 1023px */
+  
+@media screen and (min-width: 768px) and (max-width: 1023px) 
+{
+	article 
+	{
+		column-count:2;
+		column-gap: 20px;
+	}
+   
+   	h2 
+   	{
+	   float:none;
+	   margin:20px 5px 0 0;
+	}	 
+   
+	article aside 
+	{
+		float:none;
+	}
+}
+
+/* breakpoint3 for 1024 - more px */
+  
+@media screen and (min-width: 1024px) 
+{	
+	article 
+	{
+		column-count:2;
+		column-gap:30px;
+	}
+   
+   	h2 
+   	{
+	   float:none;
+	   margin:7px;
+	}	 
+   
+	article aside 
+	{
+		float:none;
+	}	
+}
+
+/* stylesheet for print media */
+
+@media print 
+{	
+	@page 
+	{
+		margin: 2cm;
+	 }
+	
+	html 
+	{
+		background:white;
+	}
+
+	body  
+	{
+		width:80%;
+		font-family:Arial, Helvetica, sans-serif;
+		background:white;
+		min-width:initial;
+		max-width:initial;
+		box-shadow:initial;
+	}
+
+	nav
+	{
+		display: none;
+	}
+}
